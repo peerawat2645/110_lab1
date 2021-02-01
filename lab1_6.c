@@ -4,20 +4,19 @@ int main()
     unsigned short int n,m,i,x=0,y=0;
     unsigned int t;
     char f;
-    scanf("%hu %hu %u",&n,&m,&t);
-    scanf(" %c",&f);
+    scanf("%hu %hu %u %c",&n,&m,&t,&f);
     if(f=='L')
     {
         for(i=1;i<t;i++)
         {
 
-            x+=n;
+            x=x+n;
             if(x>t)
             {
                 f='L';
                 break;
             }
-            x+=m;
+            x=x+m;
             if(x>t)
             {
                 f='R';
@@ -31,13 +30,13 @@ int main()
         for(i=1;i<t;i++)
         {
 
-            x+=m;
+            x=x+m;
             if(x>t)
             {
                 f='R';
                 break;
             }
-            x+=n;
+            x=x+n;
             if(x>t)
             {
                 f='L';
