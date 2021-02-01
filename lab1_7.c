@@ -6,6 +6,10 @@ int main()
     scanf("%f",&time);
     hour=(int)time;
     min=(time-hour)*100;
+    if (hour > 23 || min > 59)
+    {
+        return 1;
+    }
     if(hour==24)
     {
             x=0;
