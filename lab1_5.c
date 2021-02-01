@@ -2,22 +2,20 @@
 #include <stdio.h>
 int main ()
 {
-    int max=0,min,n,i,j;
+    int n,i,j,max=0,x;
     scanf("%d",&n);
     int a[n];
     for(j=0;j<n;j++)
         scanf("%d",&a[j]);
-    min=a[0];
     for(i=0;i<n;i++)
     {
-        if(min>a[i])
-            min=a[i];
-        else if(max<a[i])
+        if(max<a[i])
         {
             max=a[i];
+            x=i+1;
             break;
         }
     }
-    printf("%d %d",i+1,max);
+    printf("%d %d",x,a[x-1]);
     return 0;
 }
