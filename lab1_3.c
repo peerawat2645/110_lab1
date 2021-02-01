@@ -2,9 +2,9 @@
 #include <math.h>
 int main()
 {
-    unsigned int a ;
-    scanf("%u",&a);
-    printf("%d %d",a%3,a%11);
+    unsigned long long int a ;
+    scanf("%llu",&a);
+    printf("%llu %llu",a%3,a%11);
 
     return 0;
 }
