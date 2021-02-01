@@ -1,23 +1,23 @@
 #include <stdio.h>
 int main()
 {
-    unsigned short int n,m,i,x=0,y=0;
-    unsigned int t;
+    unsigned int n,m,i,k=0;
+    unsigned long int t;
     char f;
-    scanf("%hu %hu %u %c",&n,&m,&t,&f);
+    scanf("%u %u %li %c",&n,&m,&t,&f);
     if(f=='L')
     {
-        for(i=1;i<t;i++)
+        for(i=1; i<t; i++)
         {
 
-            x=x+n;
-            if(x>t)
+            k=k+n;
+            if(k>t)
             {
                 f='L';
                 break;
             }
-            x=x+m;
-            if(x>t)
+            k=k+m;
+            if(k>t)
             {
                 f='R';
                 break;
@@ -27,22 +27,21 @@ int main()
     }
     else if(f=='R')
     {
-        for(i=1;i<t;i++)
+        for(i=1; i<t; i++)
         {
 
-            x=x+m;
-            if(x>t)
+            k=k+m;
+            if(k>t)
             {
                 f='R';
                 break;
             }
-            x=x+n;
-            if(x>t)
+            k=k+n;
+            if(k>t)
             {
                 f='L';
                 break;
             }
-
         }
     }
     printf("%c",f);
