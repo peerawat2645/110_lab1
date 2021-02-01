@@ -9,14 +9,19 @@ int main()
     if (hour >= 12)
     {
         x = 1;
+        if(hour==24)
+        {
+            x=0;
+            hour=0;
+        }
         if (hour > 12)
             hour -= 12;
     }
     else
         x = 0;
     if (x == 0)
-        printf("%d:%02d a.m.", hour, min);
+        printf("%d:%02d a.m.",hour,min);
     else
-        printf("%d:%02d p.m.", hour, min);
+        printf("%d:%02d p.m.",hour,min);
     return 0;
 }
